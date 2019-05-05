@@ -1,0 +1,19 @@
+<div>
+  <mat-card class="avatar-card" *ngIf="(listavatar$ | async) as avatar; else loading">
+    <mat-card-header class="no-margin">
+      <mat-card-title>{{ avatar.id }} - {{ avatar.name }}</mat-card-title>
+      <mat-card-subtitle>Tel : {{ avatar.tel }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{avatar.image}} alt="Avatar">
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<!-- s'affiche que si les données ne sont pas récupéré -->
+<ng-template #loading>loading ...</ng-template>

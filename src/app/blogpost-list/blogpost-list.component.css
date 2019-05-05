@@ -1,0 +1,32 @@
+.avatar-card {
+  margin: 20px;
+  border-right: 4px coral solid;
+  border-bottom: 2px coral solid;
+}
+
+.avatar-card a {
+  text-decoration: none;
+  color: white;
+}
+.avatar-card a img {
+  width: 70%;
+  padding-left: 15px;
+}
+
+.no-margin {
+  margin-left: -20px;
+}
+
+@media screen and (min-width: 576px) {
+  div {
+    /* margin: 50px; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  div .avatar-card {
+    /* margin: 20px; */
+    max-width: 300px;
+  }
+}

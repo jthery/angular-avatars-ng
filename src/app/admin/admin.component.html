@@ -1,0 +1,17 @@
+<mat-card>
+  <mat-selection-list #listavatar>
+    <mat-list-option *ngFor="let avatar of allListAvatars" [value]='avatar._id'>
+      {{ avatar.name }}
+    </mat-list-option>
+  </mat-selection-list>
+</mat-card>
+<mat-card>Avatars selected: {{ listavatar.selectedOptions.selected.length }}</mat-card>
+
+<!-- method créer dans le service, qui est en suite appelé dans le typescript du fichier admin, pour être rappelé à l'aide de notre (click) pour supprimer -->
+<mat-card>
+  <mat-card-actions>
+    <button mat-button (click)="deleteAvatars(listavatar.selectedOptions.selected)">
+      Delete
+    </button>
+  </mat-card-actions>
+</mat-card>

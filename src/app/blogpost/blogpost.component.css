@@ -1,0 +1,17 @@
+
+
+@media screen and (min-width: 576px) {
+  div {
+    margin: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  div .avatar-card {
+    max-width: 400px;
+  }
+  div mat-card img {
+    width: 100%;
+  }
+}

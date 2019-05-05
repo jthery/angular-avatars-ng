@@ -1,0 +1,22 @@
+<div>
+  <mat-card class="avatar-card" *ngFor="let avatar of listAvatar$ | async">
+      <mat-card-header class="no-margin">
+        <mat-card-title>{{ avatar._id }} -
+          <a [routerLink]="['/list-avatars', avatar._id]">
+            {{ avatar.name }}
+          </a>
+        </mat-card-title>
+        <mat-card-subtitle>Tel : {{ avatar.tel }}</mat-card-subtitle>
+      </mat-card-header>
+      <a [routerLink]="['/list-avatars', avatar._id]">
+      <img mat-card-image src={{avatar.image}} alt="Avatar">
+      </a>
+      <mat-card-content>
+        <p>{{ avatar.content }}</p>
+      </mat-card-content>
+      <!-- <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <mat-button-toggle (click)="" color="primary" value="bold">Edit</mat-button-toggle>
+        <mat-button-toggle value="italic">Delete</mat-button-toggle>
+      </mat-button-toggle-group> -->
+  </mat-card>
+</div>
