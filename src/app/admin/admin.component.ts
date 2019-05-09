@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { Observable } from 'rxjs';
-import { Listavatar } from '../models/blogpost';
-import { BlogpostService } from '../blogpost.service';
+import { Listavatar } from '../models/listavatar';
+import { ListavatarsService } from '../list-avatars.service';
 
 @Component({
   selector: 'app-admin',
@@ -12,7 +12,7 @@ export class AdminComponent implements OnInit {
   // listAvatar$: Observable<Listavatar[]>;
   allListAvatars: Listavatar[];
 
-  constructor(private blogpostService: BlogpostService) { }
+  constructor(private blogpostService: ListavatarsService) { }
 
   ngOnInit() {
     // this.listAvatar$ = this.blogpostService.getListavatars();

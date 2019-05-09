@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { BlogpostService } from '../blogpost.service';
+import { ListavatarsService } from '../list-avatars.service';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
-import { Listavatar } from '../models/blogpost';
+import { Listavatar } from '../models/listavatar';
 
 @Component({
   selector: 'app-avatar',
@@ -15,7 +15,7 @@ export class AvatarComponent implements OnInit {
   listavatar: Listavatar;
 
 // afin de récupérer notre ID, on doit utiliser l'instance que angular fournis "ActivatedRoute"
-  constructor(private activatedRoute: ActivatedRoute, private blogpostService: BlogpostService) { }
+  constructor(private activatedRoute: ActivatedRoute, private blogpostService: ListavatarsService) { }
 
   ngOnInit() {
     // activatedRoute mets à dispostion snapshot qui mets à disposition snapshot paramMap et le get récupère l'id (qui correspond à /:id)

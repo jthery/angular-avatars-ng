@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { Listavatar } from './models/blogpost';
+import { Listavatar } from './models/listavatar';
 
 @Injectable({
   providedIn: 'root'
 })
-export class BlogpostService {
+export class ListavatarsService {
   baseUrl = 'http://localhost:3000/api/v1';
 
   constructor(private http: HttpClient) {}
