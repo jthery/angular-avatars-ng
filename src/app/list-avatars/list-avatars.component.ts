@@ -4,11 +4,11 @@ import { Listavatar } from '../models/blogpost';
 import { BlogpostService } from '../blogpost.service';
 
 @Component({
-  selector: 'app-blogpost-list',
-  templateUrl: './blogpost-list.component.html',
-  styleUrls: ['./blogpost-list.component.css']
+  selector: 'app-list-avatars',
+  templateUrl: './list-avatars.component.html',
+  styleUrls: ['./list-avatars.component.css']
 })
-export class BlogpostListComponent implements OnInit {
+export class ListAvatarsComponent implements OnInit {
 
   listAvatar$: Observable<Listavatar[]>;
 

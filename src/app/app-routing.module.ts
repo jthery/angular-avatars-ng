@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BlogpostListComponent } from './blogpost-list/blogpost-list.component';
-import { BlogpostComponent } from './blogpost/blogpost.component';
+import { ListAvatarsComponent } from './list-avatars/list-avatars.component';
+import { AvatarComponent } from './avatar/avatar.component';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
 
 const routes: Routes = [
-  { path: '', component: BlogpostListComponent },
-  { path: 'list-avatars', component: BlogpostListComponent },
-  { path: 'list-avatars/:id', component: BlogpostComponent },
+  { path: '', component: ListAvatarsComponent },
+  { path: 'list-avatars', component: ListAvatarsComponent },
+  { path: 'list-avatars/:id', component: AvatarComponent },
   { path: 'admin', component: AdminComponent },
   { path: 'contact', component: ContactComponent },
   { path: '**', component: ErrorpageComponent }

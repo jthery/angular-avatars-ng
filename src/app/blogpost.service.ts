@@ -21,10 +21,12 @@ export class BlogpostService {
     return this.http.get<Listavatar>(`${this.baseUrl}/list-avatars/${id}`);
   }
 
+  // delete 1 seul avatar
   deleteSingleAvatar(id: string) {
     return this.http.delete(`${this.baseUrl}/list-avatars/${id}`);
   }
 
+  // delete plusieurs avatars
   deleteAllAvatars(ids: string[]) {
     const allIds = ids.join(',');
     return this.http.delete(`${this.baseUrl}/list-avatars/?ids=${allIds}`);

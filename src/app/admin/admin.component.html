@@ -10,7 +10,8 @@
 <!-- method créer dans le service, qui est en suite appelé dans le typescript du fichier admin, pour être rappelé à l'aide de notre (click) pour supprimer -->
 <mat-card>
   <mat-card-actions>
-    <button mat-button (click)="deleteAvatars(listavatar.selectedOptions.selected)">
+    <!-- ngIf permet de poser une condition pour la supression, si on n'a rien selectionné on peut pas supprimé -->
+    <button mat-button (click)="deleteAvatars(listavatar.selectedOptions.selected)" *ngIf="listavatar.selectedOptions.selected.length > 0">
       Delete
     </button>
   </mat-card-actions>

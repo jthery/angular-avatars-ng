@@ -34,9 +34,11 @@ export class AdminComponent implements OnInit {
       if (ids.length === 1) {
         this.blogpostService
           .deleteSingleAvatar(ids[0])
-          .subscribe(data => this.refresh(data), err => console.error(err));
+          .subscribe(data => this.refresh(data), err => this.handleError(err));
       } else {
-        return this.blogpostService.deleteAllAvatars(ids).subscribe(data => this.refresh(data), err => console.error(err));
+        return this.blogpostService
+        .deleteAllAvatars(ids)
+        .subscribe(data => this.refresh(data), err => this.handleError(err));
       }
     }
 
@@ -46,5 +48,10 @@ export class AdminComponent implements OnInit {
       this.blogpostService.getListavatars().subscribe( data => {
         this.allListAvatars = data;
       });
+    }
+
+    // fonction pour le retour des erreurs
+    handleError(err) {
+      console.error(err);
     }
 }
