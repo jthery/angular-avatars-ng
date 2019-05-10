@@ -2,7 +2,13 @@
   <form [formGroup]="creationForm" (submit)="createAvatar()">
     <div class="example-container">
       <mat-form-field>
-
+        <input matInput placeholder="name" required formControlName="name">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="name" required formControlName="">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="name" required formControlName="name">
       </mat-form-field>
     </div>
   </form>

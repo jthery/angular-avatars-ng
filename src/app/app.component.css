@@ -43,24 +43,32 @@ mat-toolbar div ul li a {
   /* header */
   mat-toolbar {
     flex-direction: row;
+    height: 80px;
+    border-bottom: 2px solid #424242;
   }
   mat-toolbar div {
     width: 100%;
   }
-  mat-toolbar .logo {
-    font-size: 1.5em;
+  mat-toolbar div .logo {
+    font-size: 1.2em;
+    justify-content: flex-start;
   }
 
   mat-toolbar .hidden ul {
     flex-direction: row;
+    justify-content: flex-end;
   }
+
   mat-toolbar .hidden ul li a {
     margin-left: 20px;
+    width: 200px;
+    padding: 18px;
+    /* background-color: rgba(255, 217, 0, 0.411);
+    border-radius: 10px 10px 0px 0px; */
   }
   mat-toolbar .hidden ul li a:hover {
-    background: #F9A03F;
-    border-radius: 0.3em;
-    padding: 1.5em;
-    text-transform: uppercase;
+    padding: 18px;
+    background-color: #424242;
+    border-radius: 5px 5px 0px 0px;
   }
 }
