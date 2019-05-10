@@ -11,6 +11,7 @@ import { MaterialModule } from './material.module';
 import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { AdminComponent } from './admin/admin.component';
 import { ContactComponent } from './contact/contact.component';
+import { AvatarCreateComponent } from './avatar-create/avatar-create.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ContactComponent } from './contact/contact.component';
     ListAvatarsComponent,
     ErrorpageComponent,
     AdminComponent,
-    ContactComponent
+    ContactComponent,
+    AvatarCreateComponent
   ],
   imports: [
     BrowserModule,
