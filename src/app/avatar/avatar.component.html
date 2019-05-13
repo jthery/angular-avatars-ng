@@ -1,7 +1,7 @@
 <div>
   <mat-card class="avatar-card" *ngIf="(listavatar$ | async) as avatar; else loading">
     <mat-card-header class="no-margin">
-      <mat-card-title>{{ avatar.id }} - {{ avatar.name }}</mat-card-title>
+      <mat-card-title>{{ avatar._id }} - {{ avatar.name }}</mat-card-title>
       <mat-card-subtitle>Tel : {{ avatar.tel }}</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src={{avatar.image}} alt="Avatar">
@@ -12,8 +12,10 @@
         bred for hunting.
       </p>
     </mat-card-content>
+    <br>
   </mat-card>
 </div>
+
 
 <!-- s'affiche que si les données ne sont pas récupéré -->
 <ng-template #loading>loading ...</ng-template>
