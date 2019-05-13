@@ -12,11 +12,11 @@ export class AdminComponent implements OnInit {
   // listAvatar$: Observable<Listavatar[]>;
   allListAvatars: Listavatar[];
 
-  constructor(private blogpostService: ListavatarsService) { }
+  constructor(private listavatarsService: ListavatarsService) { }
 
   ngOnInit() {
-    // this.listAvatar$ = this.blogpostService.getListavatars();
-    this.blogpostService
+    // this.listAvatar$ = this.listavatarsService.getListavatars();
+    this.listavatarsService
       .getListavatars()
       .subscribe(data => this.refresh(data)
       //   {
@@ -30,13 +30,13 @@ export class AdminComponent implements OnInit {
     // ce qui est commenté permet de supprimer un seul id
     deleteAvatars(selectedOptions) {
       const ids = selectedOptions.map(so => so.value);
-      // this.blogpostService.deleteSingleAvatar(ids[0]).subscribe(data => console.log(data));
+      // this.listavatarsService.deleteSingleAvatar(ids[0]).subscribe(data => console.log(data));
       if (ids.length === 1) {
-        this.blogpostService
+        this.listavatarsService
           .deleteSingleAvatar(ids[0])
           .subscribe(data => this.refresh(data), err => this.handleError(err));
       } else {
-        return this.blogpostService
+        return this.listavatarsService
         .deleteAllAvatars(ids)
         .subscribe(data => this.refresh(data), err => this.handleError(err));
       }
@@ -45,7 +45,7 @@ export class AdminComponent implements OnInit {
     // afin de refresh à chaque suppression ou modification d'un avatar
     refresh(data) {
       console.log('data', data);
-      this.blogpostService.getListavatars().subscribe( data => {
+      this.listavatarsService.getListavatars().subscribe( data => {
         this.allListAvatars = data;
       });
     }
