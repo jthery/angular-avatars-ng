@@ -1,24 +1,26 @@
 <div>
-  <mat-card >
-    <mat-selection-list #listavatar>
-      <mat-list-option class="space-img" *ngFor="let avatar of allListAvatars" [value]='avatar._id'>
-        <img mat-card-image src={{avatar.image}} alt="Avatar">
-        {{ avatar.name | uppercase }}
-      </mat-list-option>
-    </mat-selection-list>
-  </mat-card>
-  <mat-card>Avatars selected: {{ listavatar.selectedOptions.selected.length }}</mat-card>
-
-  <!-- method créer dans le service, qui est en suite appelé dans le typescript du fichier admin, pour être rappelé à l'aide de notre (click) pour supprimer -->
-  <mat-card class="button-margin">
-    <mat-card-actions>
-      <!-- ngIf permet de poser une condition pour la supression, si on n'a rien selectionné on peut pas supprimé -->
-      <button mat-button (click)="deleteAvatars(listavatar.selectedOptions.selected)"
-        *ngIf="listavatar.selectedOptions.selected.length > 0">
-        Delete
-      </button>
-    </mat-card-actions>
-  </mat-card>
+  <div id="test">
+    <mat-card>
+      <mat-selection-list #listavatar>
+        <mat-list-option *ngFor="let avatar of allListAvatars" [value]='avatar._id'>
+          <img mat-card-image src={{avatar.image}} alt="Avatar">
+          {{ avatar.name | uppercase }}
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-card>
+  </div>
+  <div>
+    <mat-card>Avatars selected: {{ listavatar.selectedOptions.selected.length }}</mat-card>
+    <!-- method créer dans le service, qui est en suite appelé dans le typescript du fichier admin, pour être rappelé à l'aide de notre (click) pour supprimer -->
+    <mat-card>
+      <mat-card-actions>
+        <!-- ngIf permet de poser une condition pour la supression, si on n'a rien selectionné on peut pas supprimé -->
+        <button mat-button (click)="deleteAvatars(listavatar.selectedOptions.selected)"
+          *ngIf="listavatar.selectedOptions.selected.length > 0">
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
-<app-avatar-create></app-avatar-create>
-
+<!-- <app-avatar-create></app-avatar-create> -->
