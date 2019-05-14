@@ -11,6 +11,11 @@ export class ListavatarsService {
 
   constructor(private http: HttpClient) {}
 
+  // pour créer un avatar
+  createAvatar(post: Listavatar) {
+    return this.http.post<Listavatar>(`${this.baseUrl}/list-avatars`, post);
+  }
+
   // pour récupérer notre List d'avatar grâce à notre service et ce get
   getListavatars(): Observable<Listavatar[]> {
     return this.http.get<Listavatar[]>(`${this.baseUrl}/list-avatars`);

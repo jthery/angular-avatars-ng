@@ -29,8 +29,18 @@ export class AvatarCreateComponent implements OnInit {
   // notre submit
   createAvatar() {
     if(this.creationForm.valid) {
-      console.log(this.creationForm);
+      console.log(this.creationForm.value);
+      this.ListavatarsService
+      .createAvatar(this.creationForm.value)
+      .subscribe(data => this.handleSuccess(data), error => this.handleError(error));
     };
   };
 
+  handleSuccess(data) {
+    console.log('avatar created', data);
+  }
+
+  handleError(error) {
+    console.error('KO avatar created', error);
+  }
 }
