@@ -69,6 +69,6 @@ mat-toolbar div ul li a {
   mat-toolbar .hidden ul li a:hover {
     padding: 18px;
     background-color: #424242;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 2px 2px 0px 0px;
   }
 }

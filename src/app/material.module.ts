@@ -7,8 +7,8 @@ import {
   MatButtonModule,
   MatListModule,
   MatButtonToggleModule,
+  MatInputModule,
 } from '@angular/material';
-import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [],
@@ -19,8 +19,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatButtonToggleModule,
-    ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
   ],
   exports: [
     MatToolbarModule,
@@ -28,8 +28,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatButtonModule,
     MatListModule,
     MatButtonToggleModule,
-    ReactiveFormsModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatInputModule,
   ]
 })
 export class MaterialModule { }

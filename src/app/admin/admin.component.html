@@ -3,7 +3,7 @@
     <mat-selection-list #listavatar>
       <mat-list-option class="space-img" *ngFor="let avatar of allListAvatars" [value]='avatar._id'>
         <img mat-card-image src={{avatar.image}} alt="Avatar">
-        {{ avatar.name }}
+        {{ avatar.name | uppercase }}
       </mat-list-option>
     </mat-selection-list>
   </mat-card>
@@ -20,3 +20,5 @@
     </mat-card-actions>
   </mat-card>
 </div>
+<app-avatar-create></app-avatar-create>
+

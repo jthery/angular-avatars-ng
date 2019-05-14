@@ -1,9 +1,9 @@
 <div>
   <mat-card class="avatar-card" *ngFor="let avatar of listAvatar$ | async">
       <mat-card-header class="no-margin">
-        <mat-card-title>{{ avatar._id }} -
+        <mat-card-title>
           <a [routerLink]="['/list-avatars', avatar._id]">
-            {{ avatar.name }}
+            {{ avatar.name | uppercase }}
           </a>
         </mat-card-title>
         <mat-card-subtitle>Tel : {{ avatar.tel }}</mat-card-subtitle>

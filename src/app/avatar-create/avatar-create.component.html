@@ -1,15 +1,17 @@
-<!-- <mat-card>
-  <form [formGroup]="creationForm" (submit)="createAvatar()">
-    <div class="example-container">
-      <mat-form-field>
-        <input matInput placeholder="name" required formControlName="name">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="name" required formControlName="">
-      </mat-form-field>
-      <mat-form-field>
-        <input matInput placeholder="name" required formControlName="name">
-      </mat-form-field>
-    </div>
-  </form>
-</mat-card> -->
+<form [formGroup]="creationForm" (submit)="createAvatar()">
+  <div class="example-container">
+    <mat-form-field>
+      <input matInput placeholder="name" formControlName="name" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="tel" formControlName="tel" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="content" formControlName="content" required>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="image" formControlName="image" required>
+    </mat-form-field>
+    <button mat-button type="submit">create</button>
+  </div>
+</form>

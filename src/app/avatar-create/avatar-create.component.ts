@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder } from '@angular/forms';
+import { ListavatarsService } from '../list-avatars.service';
 
 @Component({
   selector: 'app-avatar-create',
@@ -6,10 +8,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./avatar-create.component.css']
 })
 export class AvatarCreateComponent implements OnInit {
+  creationForm: FormGroup;
 
-  constructor() { }
+  constructor(private fb: FormBuilder, private ListavatarsService: ListavatarsService) { }
 
   ngOnInit() {
+    this.createForm();
   }
+
+  // notre creation d'avatar avec le module forms
+  createForm() {
+    this.creationForm = this.fb.group({
+      name: '',
+      tel: '',
+      content: '',
+      image: '',
+    });
+  }
+
+  // notre submit
+  createAvatar() {
+    if(this.creationForm.valid) {
+      console.log(this.creationForm);
+    };
+  };
 
 }
